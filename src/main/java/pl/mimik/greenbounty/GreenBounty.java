@@ -48,7 +48,7 @@ public final class GreenBounty extends JavaPlugin implements Listener {
 
     public void openRewardGui(Player p, Player target) {
         PendingBounty old = pending.remove(p.getUniqueId());
-        if (old != null) returnItems(p, old.rewards);
+        if (old != null) returnItems(p, extractRewards(old.inventory));
         Inventory inv = Bukkit.createInventory(null, 27, GUI + " • " + target.getName());
         // Reward slots intentionally start empty so players can place real items from their inventory.
         inv.setItem(4, button(Material.NAME_TAG, ChatColor.GREEN + "Cel: " + target.getName(), "Maksymalnie 3 nagrody"));
