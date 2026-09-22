@@ -1,0 +1,15 @@
+name: GreenBounty
+version: '${version}'
+main: pl.mimik.greenbounty.GreenBounty
+api-version: '1.21'
+author: Mimik
+description: Item-based bounty system with a 3-item reward GUI.
+commands:
+  greenbounty:
+    description: GreenBounty command
+    usage: /greenbounty [zleć|moje|top|info|usun|wyczysc|reload]
+    aliases: [gbounty]
+permissions:
+  greenbounty.admin:
+    description: GreenBounty administration
+    default: op
